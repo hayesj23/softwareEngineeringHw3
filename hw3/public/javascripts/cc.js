@@ -1,3 +1,4 @@
+//Jimi Hayes
 $(document).ready(function(){
     $("#order").click(function(){
         if($("#notesbox").val().toLowerCase().includes("vegan")) {
