@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!--Jimi Hayes-->
+
+<html>
+
+	<head>
+		
+		<!--sets the page title to "Cheesecake Order Form"-->
+		<title>Cheesecake Order Form</title>
+
+		<!--connects the css file to the html file-->
+		<link rel="stylesheet" href="stylesheets/hayesj23.css">
+
+		<!--connects the html file to javascript-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<script src="javascripts/cc.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Cheesecake Order Form</h1>
+
+		<!--includes image at the listed URL-->
+		<img 
+		src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+		width="200"
+		height="200"><br>
+		<p id="orderdetails"></p>
+		<form>
+			<!--puts elements into a table to allow things to be properly formatted-->
+			<table>
+				<tr>Quantity Topping</tr>
+				<tr>
+					<td>
+						<!--generates dropdown menu-->
+						<select name="quantity" id="quantity">
+
+							<option value="1">1</option>
+
+							<option value="2">2</option>
+
+							<option value="3" selected>3</option>
+
+							<option value="4">4</option>
+
+							<option value="5">5</option>
+
+						</select>
+					</td>
+					<td>
+						<!--generates radiobuttons-->
+						<input type="radio" id="Plain" name="topping" checked>
+						<label for="Plain">Plain</label><br>
+						<input type="radio" id="Cherry" name="topping">
+						<label for="Cherry">Cherry</label><br>
+						<input type="radio" id="Chocolate" name="topping">
+						<label for="Chocolate">Chocolate</label><br>
+					</td>
+				</tr>
+			</table>
+			Notes:<br>
+		
+			<!--generates the text area  for typing special instructions-->
+			<textarea id="notesbox" placeholder="Enter any special instructions here" cols="50" rows="4" name="notesBox" style="color:grey"></textarea><br>
+			<input type="button" id="order" name="order" value="Order">
+		</form>
+		<h3>Total Orders for</h3>
+		<!--Uses example from W3Schools @https://www.w3schools.com/howto/howto_css_dropdown.asp to generate dropdown.
+		also uses article @https://stackoverflow.com/questions/18703133/using-jquery-inside-of-an-href-tag to fix href-->
+		<div class="dropdown">
+  			<button class="dropbtn" id="droptext">Jan</button>
+  			<div class="dropdown-content">
+				<a href="#" onclick="$('#droptext').text('Jan');">Jan</a>
+				<a href="#" onclick="$('#droptext').text('Feb');">Feb</a>
+				<a href="#" onclick="$('#droptext').text('Mar');">Mar</a>
+				<a href="#" onclick="$('#droptext').text('Apr');">Apr</a>
+				<a href="#" onclick="$('#droptext').text('May');">May</a>
+				<a href="#" onclick="$('#droptext').text('Jun');">Jun</a>
+				<a href="#" onclick="$('#droptext').text('Jul');">Jul</a>
+				<a href="#" onclick="$('#droptext').text('Aug');">Aug</a>
+				<a href="#" onclick="$('#droptext').text('Sep');">Sep</a>
+				<a href="#" onclick="$('#droptext').text('Oct');">Oct</a>
+				<a href="#" onclick="$('#droptext').text('Nov');">Nov</a>
+				<a href="#" onclick="$('#droptext').text('Dec');">Dec</a>
+  			</div>
+		</div> 
+		<ul style="list-style-type:disc">
+  			<li id=cheLi>11 Cherry</li>
+  			<li id=choLi>17 Chocolate</li>
+  			<li id=plaLi>31 Plain</li>
+		</ul>
+	</body>
+
+</html>
